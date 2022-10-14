@@ -9,12 +9,14 @@ keys.addEventListener("click", (event) => {
   const key = event.target;
   const keyValue = key.textContent;
   const displayValue = display.textContent;
-  const { type } = key.dataset;
+  const { type } = key.dataset; //key-type attribute
   const { previousKeyType } = calculator.dataset;
 
   //   Is this a number key?
   if (type === "number") {
+    //if the value of key.dataset is number
     if (displayValue === "0" || previousKeyType === "operator") {
+      //if the display is showing zero or the value of data-previous-key-type is operator
       display.textContent = keyValue;
     } else if (previousKeyType === "operator") {
       display.textContent = keyValue;
@@ -25,15 +27,17 @@ keys.addEventListener("click", (event) => {
 
   //   Is this an operator key?
   if (type === "operator") {
+    // Grabs all data-type="operator" attribute tags
     const operatorKeys = keys.querySelectorAll('[data-type="operator"]');
-    operatorKeys.forEach((el) => (el.dataset.state = "")); //allows one operator button to be selected at a time
-    key.dataset.state = "selected";
+    operatorKeys.forEach((el) => (el.dataset.state = "")); //allows one operator button to be selected at a time. <tag data-state=""></tag>
+    key.dataset.state = "selected"; //then sets the value to selected
 
-    calculator.dataset.firstNumber = displayValue;
-    calculator.dataset.operator = key.dataset.key;
+    calculator.dataset.firstNumber = displayValue; //keeps the first number you clicked on the display when you hit the operator
+    calculator.dataset.operator = key.dataset.key; //sets data-operator to the value within data-key (plus, minus, etc.)
   }
 
   if (type === "clear") {
+    //grabs plus, minus, times, divide keys
     const operatorKeys = keys.querySelectorAll('[data-type="operator"]');
     operatorKeys.forEach((el) => (el.dataset.state = ""));
     key.dataset.state = "";
@@ -43,13 +47,6 @@ keys.addEventListener("click", (event) => {
   }
 
   if (type === "equal") {
-    /*
-    Perform a calculation:
-    firstNumber + secondNumber
-    firstNumber - secondNumber
-    firstNumber * secondNumber
-    firstNumber / secondNumber
-    */
     const firstNumber = parseInt(calculator.dataset.firstNumber);
     const operator = calculator.dataset.operator;
     const secondNumber = parseInt(displayValue);
