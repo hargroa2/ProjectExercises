@@ -1,18 +1,10 @@
 import "./App.css";
-
-const Person = (props) => {
-  <>
-    <h1>Name: {props.name}</h1>
-    <h1>Last Name: Doe</h1>
-    <h2>Age: 30</h2>
-  </>;
-};
+// import { useState, useEffect } from "react";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Person</h1>
-      <Person name={"John"} />
+      <h1>hi</h1>
     </div>
   );
 };
