@@ -12,8 +12,14 @@
 - Inside package.json, you can see all the dependencies or packages that your application has installed currently
 - Within index.html, there is a single div with an id of root, where all of our react components are going to get injected inside of
 
-useEffect:
+### useState:
 
+- useState is a JavaScript object to represent a piece of information about the component's current situation
+- The useState hook has a const and then uses the concept of array destructuring, which will have the name of that state (counter) and the setter function (setCounter), and then in the useState you provide the initial value that it will be set to (0 for a counter)
+
+### useEffect:
+
+- useEffect allows us to do something on some kind of an effect or some kind of event
 - without dependency array: will occur every time the page loads
 - with empty dependency array: will occur only at the initial loading of the page
 - with dependency array: will occur every time the variable inside changes
