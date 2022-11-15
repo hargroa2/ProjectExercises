@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import fishcat from "../src/assets/fishcat.png";
 
 const Nav = () => {
   return (
     <div>
       <header className="nav">
-        <img src="../assets/fishcat.png" alt="Logo" />
+        <img src={fishcat} alt="Logo" />
         <ul>
           <li>
             <Link to="/">HOME</Link>

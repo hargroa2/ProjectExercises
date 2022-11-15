@@ -22,8 +22,15 @@ body {
   border-bottom: 2px solid white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: black;
   letter-spacing: 3px;
+
+  img {
+    width: 92px;
+    height: 46px;
+    margin-left: 10px;
+  }
 
   ul {
     display: flex;
