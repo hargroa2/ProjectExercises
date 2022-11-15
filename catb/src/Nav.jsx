@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <div>
-      <div className="nav">
+      <header className="nav">
+        <img src="../assets/fishcat.png" alt="Logo" />
         <ul>
           <li>
             <Link to="/">HOME</Link>
@@ -25,7 +26,8 @@ const Nav = () => {
             <Link to="/shop">SHOP</Link>
           </li>
         </ul>
-      </div>
+        <Link to="/signup">SIGNUP</Link>
+      </header>
     </div>
   );
 };

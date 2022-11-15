@@ -1,1 +1,40 @@
+@font-face {
+  font-family: "P22 Underground";
+  src: local("P22Underground"),
+    url("../fonts/P22 Johnston Underground Regular.ttf") format("truetype");
+}
 
+html {
+  font-family: "P22 Underground";
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background-color: black;
+}
+
+.nav {
+  min-width: 100vw;
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  letter-spacing: 3px;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style-type: none;
+    margin: 1rem;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
