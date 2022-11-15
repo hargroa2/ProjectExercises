@@ -27,7 +27,9 @@ const Nav = () => {
             <Link to="/shop">SHOP</Link>
           </li>
         </ul>
-        <Link to="/signup">SIGNUP</Link>
+        <Link to="/signup" className="signup">
+          SIGNUP
+        </Link>
       </header>
     </div>
   );
