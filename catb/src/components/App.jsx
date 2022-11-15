@@ -1,6 +1,6 @@
-import "./App.scss";
-import "./main";
-import Nav from "./Nav.jsx";
+import "../styles/App.scss";
+import "../main";
+import Nav from "../Nav.jsx";
 
 function App() {
   return (

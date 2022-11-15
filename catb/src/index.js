@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import Live from "./Live";
-import Video from "./Video";
-import Photos from "./Photos";
+import App from "./components/App";
+import Live from "./components/Live";
+import Video from "./components/Video";
+import Photos from "./components/Photos";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Lyrics from "./Lyrics";
-import Shop from "./Shop";
+import Lyrics from "./components/Lyrics";
+import Shop from "./components/Shop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,13 +1,13 @@
 import React from "react";
-import Nav from "./Nav.jsx";
+import Nav from "../Nav";
 
-const Live = () => {
+const Video = () => {
   return (
     <div>
       <Nav />
-      LIVE
+      VIDEO
     </div>
   );
 };
 
-export default Live;
+export default Video;
